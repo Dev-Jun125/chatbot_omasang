@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<link href="style.css" rel="stylesheet" type="text/css"/>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+      body{
+   
+     background-image : url(https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FYU1Wx%2FbtqDGg6iJL1%2FwbFnHTkri0FN9y3JF199F0%2Fimg.jpg);
+     background-repeat : no-repeat;
+		background-size : cover;
+    color: white ;
+
+
+
+
+      }
+    input[type="text"]{
+      width: 300px;
+      height: 38px;
+      font-size: 25px;   
+    }
+    input[type="password"]{
+      width: 300px;
+      height: 38px;
+      font-size: 25px;
+      margin-top:40px;
+      background-image : url(KakaoTalk_20201203_223711454.jpg;);
+    }  
+    .nav{
+      height: 100px;
+      border-bottom: 5px solid rgb(5, 5, 5);
+      display: flex;
+      align-items: center;
+      margin-left: 10px; 
+      }
+    .main{
+      text-align: center;
+      font-size: 30px;
+      font-weight:bold;     
+      } 
+    .information{
+    text-align: center;
+    font-size: 180%;
+    }
+    .navin{
+    display: flex;
+    margin-left: auto;
+    margin-right: 30px;
+    } 
+    </style>
+</head>
+
+<body>
+ 
+ 
+    <div class="nav">
+        <div class="mainname">
+          made by 조금만버텨 and cutyjjun123
+        </div>
+  
+        <div class="navin">
+        <form method="post" action="signup.php"><br/>
+             <input type="submit" value="회원가입"style= 
+             "width: 80px; height:40px;border-radius: 4px;
+              border: 0;outline: 0; font-size: 15px; background-color:rgb(75, 80, 85);">
+         </form>  
+        </div>
+      </div>
+
+    <div class="main">
+    <h1>고객 출입 관리 시스템</h1>
+    <p>업장 로그인 페이지 입니다. <br><br><br></p>
+    </div>
+
+    <div class = "information"> 
+    <form method="POST" action="login_check.php"><br/> 
+        <input type="text" name="userNUMBER"  placeholder="사 업 자 번 호" style="border-radius: 4px;" ><br/>
+        <input type="password" name="userPW" placeholder="비 밀 번 호"style="border-radius: 4px;">
+        <br/><br/><br/>
+        <input type="submit" name="log" value="로그인" style= 
+        "width: 100px; height:100px; position: absolute;top: 475px;right:650px; border-radius: 15px; 
+         border: 0;outline: 0; font-size: 20px;">    
+    </form>
+</div>  
+</body>
+</html>
