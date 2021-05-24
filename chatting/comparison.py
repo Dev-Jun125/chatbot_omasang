@@ -17,7 +17,6 @@ def response_select(user_input):
     for i in range (len(pos_list)):
         val = ('%' + pos_list[i] + '%',)
         result = db.fetchall(sql,val)
-        print(result)
         try:
             for j in range (len(result)):
                 id_list.append(result[j][0])
@@ -29,9 +28,7 @@ def response_select(user_input):
     try:
         sql = '''SELECT output_text FROM conversation WHERE id = %s;'''
         val = (mfv[0][0])
-        print(mfv[0][0])
         selected_response.append(db.fetchone(sql, val))
-        print(db.fetchone(sql, val))
         try:
             sql = '''SELECT input_text FROM conversation WHERE id = %s;'''
             for i in range (1,5):

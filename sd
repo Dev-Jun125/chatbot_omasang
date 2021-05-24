@@ -1,0 +1,47 @@
+[33mcommit c2d73b1ce99b305fe5f7b0b31d9b96581f8a5909[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Reflog: HEAD@{0} (DongJun Kim <dev.jun125@gmail.com>)
+Reflog message: commit: test
+Author: DongJun Kim <dev.jun125@gmail.com>
+Date:   Mon May 24 02:37:14 2021 +0900
+
+    test
+
+[33mcommit ede987d4bc63f7bfd6b30a09806a7f80a6222a0c[m[33m ([m[1;32mmain[m[33m)[m
+Reflog: HEAD@{1} (DongJun Kim <dev.jun125@gmail.com>)
+Reflog message: checkout: moving from main to master
+Author: DongJun Kim <dev.jun125@gmail.com>
+Date:   Mon May 24 02:10:10 2021 +0900
+
+    test
+
+[33mcommit ede987d4bc63f7bfd6b30a09806a7f80a6222a0c[m[33m ([m[1;32mmain[m[33m)[m
+Reflog: HEAD@{2} (DongJun Kim <dev.jun125@gmail.com>)
+Reflog message: commit: test
+Author: DongJun Kim <dev.jun125@gmail.com>
+Date:   Mon May 24 02:10:10 2021 +0900
+
+    test
+
+[33mcommit 5f6cfb42ffa84395ad9c534b6ba7064264aaf3a9[m
+Reflog: HEAD@{3} (DongJun Kim <dev.jun125@gmail.com>)
+Reflog message: commit: test
+Author: DongJun Kim <dev.jun125@gmail.com>
+Date:   Mon May 24 02:00:00 2021 +0900
+
+    test
+
+[33mcommit 9d5d6e7e00852cde368176ab18179554b900b1ae[m
+Reflog: HEAD@{4} (DongJun Kim <dev.jun125@gmail.com>)
+Reflog message: Branch: renamed refs/heads/master to refs/heads/main
+Author: DongJun Kim <dev.jun125@gmail.com>
+Date:   Mon May 24 01:29:55 2021 +0900
+
+    test
+
+[33mcommit 9d5d6e7e00852cde368176ab18179554b900b1ae[m
+Reflog: HEAD@{6} (DongJun Kim <dev.jun125@gmail.com>)
+Reflog message: commit (initial): test
+Author: DongJun Kim <dev.jun125@gmail.com>
+Date:   Mon May 24 01:29:55 2021 +0900
+
+    test
