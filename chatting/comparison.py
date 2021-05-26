@@ -6,11 +6,11 @@ id_list는 pos_tags에 저장된 입력한 질문의 명사 리스트를 데이�
 명사 태그들과 하나씩 비교하여 그 명사가 들어있는 해당 답변의 번호를 출력한다. 
 """
 
-db = dbconnect.SqlCommunication()
 komo = morpheme.Komo()
 
 #indexing db
 def response_select(user_input):
+    db = dbconnect.SqlCommunication()
     pos_list = komo.komo_pos_v2(user_input, state = 'normal')
     id_list = []
     sql = '''SELECT id FROM conversation WHERE pos_tags LIKE %s;'''
@@ -41,7 +41,7 @@ def response_select(user_input):
         selected_response = [('죄송해요. 잘 모르겠어요.',)] # 검색결과가 없을 때 송출 메시지
         for i in range (1,5):
                 selected_response.append([('NULL'),])
-    
+    db.close()
     return selected_response
 
 def most_frequency_value(id_list):
@@ -49,6 +49,8 @@ def most_frequency_value(id_list):
 
 
 def userinput(userinput):
+    db = dbconnect.SqlCommunication()
+
     sql = '''INSERT INTO `userInput` (userInput) 
     VALUES (%s);'''
 

@@ -10,7 +10,6 @@ from rest_framework.response import Response
 from chatting.models import Userinput
 from chatting.serializers import userinputSerializer
 # Create your views here.
-dbconnect = dbconnect.SqlCommunication()
 
 def hello(request):
 

@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = my_settings.SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False #프로젝트 배포 시 False로 변경해!
+DEBUG = True #프로젝트 배포 시 False로 변경해!
 
 
 ALLOWED_HOSTS = [
