@@ -39,9 +39,3 @@ class SqlCommunication:
     
     def close(self):
         self.db.close()
-    
-
-
-    
-
-   
