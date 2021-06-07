@@ -5,7 +5,7 @@ import yaml
 
 class SqlCommunication:
     def __init__(self):
-        with open('/home/ubuntu/real/chatbot_omasang/chatting/connection_information.yaml', encoding = 'UTF-8') as connect_inf:
+        with open('chatting\connection_information.yaml', encoding = 'UTF-8') as connect_inf:
             information_deployment = yaml.load(connect_inf, Loader=yaml.FullLoader)
         info = information_deployment
         self.db = pymysql.connect(
