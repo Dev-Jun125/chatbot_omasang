@@ -1,5 +1,0 @@
-user: 'DONGJUN'
-passwd: 'dongjun125'
-host: 'kimdongjun.clpoyguhtsh4.ap-northeast-2.rds.amazonaws.com'
-db: 'chatbot'
-charset: 'utf8'
