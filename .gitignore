@@ -163,4 +163,8 @@ Thumbs.db
 .prof
 
 
+<<<<<<< HEAD
 # End of https://www.toptal.com/developers/gitignore/api/django
+=======
+# End of https://www.toptal.com/developers/gitignore/api/django
+>>>>>>> 64da3d56cb38d609e285c3945f84101a8252e8de

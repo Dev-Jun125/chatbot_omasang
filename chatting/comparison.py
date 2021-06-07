@@ -45,14 +45,15 @@ def response_select(user_input):
             pass
     mfv = Counter(id_list).most_common() # most frequency value, [(질문번호1, 점수1), (질문번호2, 점수2)]
     try:
-        sql = '''SELECT output_text FROM conversation WHERE id = %s;'''
+        sql = '''SELECT output_text, link FROM conversation WHERE id = %s;'''
         val = (mfv[0][0])
+        print(db.fetchone(sql,val)[1])
         if(db.fetchone(sql,val)[0]=='1'):
             val = random.randint(1,12)
             sql = '''SELECT * FROM recommend_menu WHERE recomenuId = %s; '''
             selected_response.append(['오늘은 '+db.fetchone(sql, val)[2] + ' '  + db.fetchone(sql, val)[1]+' 어때요?'])
         else:
-            selected_response.append(db.fetchone(sql, val))
+            selected_response.append([db.fetchone(sql, val)[0] + '\n' + db.fetchone(sql, val)[1]])
         try:
             sql = '''SELECT input_text FROM conversation WHERE id = %s;'''
             for i in range (1,5):
