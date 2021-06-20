@@ -12,8 +12,8 @@ from chatting.serializers import userinputSerializer
 # Create your views here.
 
 def hello(request):
-
-    message = {'message' : '안녕하세요 한서대학교 챗봇 오마상이에요'}
+    response = comparison.hello_tip()
+    message = {'message' : response[0]}
     return JsonResponse(message)
 
 

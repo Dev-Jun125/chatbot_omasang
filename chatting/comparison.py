@@ -81,3 +81,12 @@ def userinput(userinput):
 
     db.cursor.execute(sql,userinput)
     db.commit()
+
+def hello_tip():
+    db = dbconnect.SqlCommunication()
+    val = random.randint(1,6)
+    selected_response = []
+    sql = '''SELECT tipOutput FROM tip WHERE idx = %s;'''
+    selected_response.append('안녕~ 나는 오마상이야\n 혹시 너 그거 알아?\n '+db.fetchone(sql, val)[0])
+    db.close()
+    return selected_response
