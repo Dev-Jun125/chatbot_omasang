@@ -4,6 +4,6 @@ from django.contrib import admin
 
 urlpatterns = [
     path('', include('chatbot.urls')),
-    path('chatting', include('chatting.urls')),
+    path('chatting/', include('chatting.urls')),
     
 ]

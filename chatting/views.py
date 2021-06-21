@@ -9,15 +9,18 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from chatting.models import Userinput
 from chatting.serializers import userinputSerializer
-# Create your views here.
+from django.views.decorators.csrf import csrf_exempt
 
+
+# Create your views here.
+@csrf_exempt
 def hello(request):
     response = comparison.hello_tip()
     message = {'message' : response[0]}
     return JsonResponse(message)
 
 
-
+@csrf_exempt
 def basic_Conversation(request, word):
     user_input = ''
     chatbot_respond = ''

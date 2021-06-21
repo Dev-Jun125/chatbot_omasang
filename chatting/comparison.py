@@ -51,6 +51,13 @@ def response_select(user_input):
             val = random.randint(1,12)
             sql = '''SELECT * FROM recommend_menu WHERE recomenuId = %s; '''
             selected_response.append(['오늘은 '+db.fetchone(sql, val)[2] + ' '  + db.fetchone(sql, val)[1]+' 어때요?'])
+        elif(db.fetchone(sql,val)[0]=='2'):
+            
+
+            val = random.randint(1,6)
+            sql = '''SELECT tipOutput FROM tip WHERE idx = %s;'''
+            print(db.fetchone(sql,val)[0])
+            selected_response.append(['이거 너만 알려주는건데 '+db.fetchone(sql, val)[0]])    
         else:
             selected_response.append(db.fetchone(sql, val))
         try:

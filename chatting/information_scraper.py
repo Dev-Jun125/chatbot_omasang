@@ -1,4 +1,4 @@
-import trainer
+from . import trainer
 from bs4 import BeautifulSoup
 from pprint import pprint
 import requests
