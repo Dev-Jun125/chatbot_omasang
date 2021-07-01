@@ -33,7 +33,7 @@ def response_select(user_input):
             selected_response.append(['욕은 하지말아주세요.'])
         return selected_response
 
-
+    print(commandCheck(user_input))
     sql = '''SELECT id FROM conversation WHERE pos_tags LIKE %s;'''
     for i in range (len(pos_list)):
         val = ('%' + pos_list[i] + '%',)
@@ -94,3 +94,12 @@ def hello_tip():
     selected_response.append('안녕~ 나는 오마상이야\n 혹시 너 그거 알아?\n '+db.fetchone(sql, val)[0])
     db.close()
     return selected_response
+
+def commandCheck(user_input):
+    print(user_input[0:3])
+    if user_input[0:3] == '!오픈':
+        return 1
+    elif user_input[0:3] == '!명령':
+        return 2
+    else:
+        return
