@@ -15,6 +15,10 @@ db.sqlite3-journal
 media
 connection_information.yaml
 
+<<<<<<< HEAD
+=======
+*.pyc
+>>>>>>> 242919a1a914cdea83fa5c5f5927844275fa2fb4
 
 
 # If your build process includes running collectstatic, then you probably don't need or want to include staticfiles/
@@ -163,4 +167,8 @@ Thumbs.db
 .prof
 
 
+<<<<<<< HEAD
 # End of https://www.toptal.com/developers/gitignore/api/django
+=======
+# End of https://www.toptal.com/developers/gitignore/api/django
+>>>>>>> 242919a1a914cdea83fa5c5f5927844275fa2fb4

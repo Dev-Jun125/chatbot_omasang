@@ -32,8 +32,8 @@ def basic_Conversation(request, word):
             'message4' : response[3][0],
             'message5' : response[4][0],
         }       
+        
         return JsonResponse(message)
-
 
 @api_view(['post'])
 def chatAPI(request):
