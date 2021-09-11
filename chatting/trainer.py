@@ -80,4 +80,4 @@ def information_update(info, **kwargs):
     db.commit()
     print('공지사항 업데이트 완료.')
 
-manual_trainer()
+# manual_trainer()
