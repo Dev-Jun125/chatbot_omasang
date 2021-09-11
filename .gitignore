@@ -18,6 +18,12 @@ nohup.out
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+*.pyc
+>>>>>>> 242919a1a914cdea83fa5c5f5927844275fa2fb4
+
+>>>>>>> 680b2ae8d44d30429acbce69b0cd16ef7747045c
 
 >>>>>>> b67816c51eb257a933fc3f803085a04b77dc669e
 # If your build process includes running collectstatic, then you probably don't need or want to include staticfiles/
@@ -164,10 +170,3 @@ Thumbs.db
 
 # profiling data
 .prof
-
-
-<<<<<<< HEAD
-# End of https://www.toptal.com/developers/gitignore/api/django
-=======
-# End of https://www.toptal.com/developers/gitignore/api/django
->>>>>>> b67816c51eb257a933fc3f803085a04b77dc669e
