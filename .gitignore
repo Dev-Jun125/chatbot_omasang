@@ -14,8 +14,12 @@ db.sqlite3
 db.sqlite3-journal
 media
 connection_information.yaml
+nohup.out
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> b67816c51eb257a933fc3f803085a04b77dc669e
 # If your build process includes running collectstatic, then you probably don't need or want to include staticfiles/
 # in your Git repository. Update and uncomment the following line accordingly.
 # <django-project-name>/staticfiles/
@@ -162,4 +166,8 @@ Thumbs.db
 .prof
 
 
+<<<<<<< HEAD
 # End of https://www.toptal.com/developers/gitignore/api/django
+=======
+# End of https://www.toptal.com/developers/gitignore/api/django
+>>>>>>> b67816c51eb257a933fc3f803085a04b77dc669e
