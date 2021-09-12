@@ -65,6 +65,6 @@ def general_info():
     output = '\n\n'.join(get_title)
     trainer.information_update(output, state = 'general')
 
-# cafeteria_info()
-# collage_info()
-# general_info()
+cafeteria_info()
+collage_info()
+general_info()
