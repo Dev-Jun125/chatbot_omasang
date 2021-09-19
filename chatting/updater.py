@@ -16,7 +16,7 @@ def timer():
     # hourminute = time.strftime('%H : %M', localtime(tm))
     print(time.strftime('\rwaiting for update... %X', time.localtime(time.time())), end='')
 
-schedule.every(1).second.do(timer)
+# schedule.every(1).second.do(timer)
 schedule.every().monday.at("10:30").do(cafeteria_update)
 schedule.every(3).hours.do(notice_update)
 
