@@ -46,8 +46,6 @@ INSTALLED_APPS = [
     'chatbot.apps.ChatbotConfig',
     'rest_framework',
     'chatting.apps.ChattingConfig',
-    'bootstrap4',
-    'chathome'
 ]
 
 REST_FRAMEWORK = { # Use Django's standard `django.contrib.auth` permissions, # or allow read-only access for unauthenticated users. 
