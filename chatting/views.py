@@ -27,6 +27,7 @@ def basic_Conversation(request, word):
     user_input = word
     comparison.userinput(user_input)
     response = comparison.response_select(word)
+    print(response)
     while(True):
         message = {
             'message' : response[0][0],
@@ -34,6 +35,7 @@ def basic_Conversation(request, word):
             'message3' : response[2][0],
             'message4' : response[3][0],
             'message5' : response[4][0],
+            'message6' : response[5][0],
         }       
         
         return JsonResponse(message)

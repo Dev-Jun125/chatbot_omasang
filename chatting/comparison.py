@@ -33,7 +33,7 @@ def response_select(user_input):
             selected_response.append(['욕은 하지말아주세요.'])
         return selected_response
 
-    print(commandCheck(user_input))
+    
     sql = '''SELECT id FROM conversation WHERE pos_tags LIKE %s;'''
     for i in range (len(pos_list)):
         val = ('%' + pos_list[i] + '%',)
@@ -69,6 +69,18 @@ def response_select(user_input):
         selected_response = [('죄송해요. 잘 모르겠어요.',)] # 검색결과가 없을 때 송출 메시지
         for i in range (1,5):
             selected_response.append([('NULL'),])
+    print(selected_response)
+    sql = '''SELECT link FROM conversation WHERE id = %s;'''
+    val = (mfv[0][0])
+
+    if db.fetchone(sql, val)[0] == None:
+        print(selected_response)
+        selected_response.append([('NULL'),])
+    else:
+        print(selected_response)
+        selected_response.append(db.fetchone(sql, val))
+    
+    
     db.close()
     return selected_response
         
