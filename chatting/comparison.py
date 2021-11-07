@@ -29,8 +29,9 @@ def response_select(user_input):
         except:
             pass
     if(word_list!=[]):
-        for i in range (0,5):
-            selected_response.append(['욕은 하지말아주세요.'])
+        selected_response.append(['욕은 하지말아주세요.'])
+        for i in range (0,6):
+            selected_response.append([('NULL'),])
         return selected_response
 
     
@@ -44,6 +45,7 @@ def response_select(user_input):
         except:
             pass
     mfv = Counter(id_list).most_common() # most frequency value, [(질문번호1, 점수1), (질문번호2, 점수2)]
+    
     try:
         sql = '''SELECT output_text FROM conversation WHERE id = %s;'''
         val = (mfv[0][0])
@@ -59,26 +61,28 @@ def response_select(user_input):
             selected_response.append(db.fetchone(sql, val))
         try:
             sql = '''SELECT input_text FROM conversation WHERE id = %s;'''
+            i = random.randint(1,len(mfv))
+            print(i)
             for i in range (1,5):
-                val = (mfv[i][0],)
+                val = (mfv[random.randint(0,len(mfv))][0],)
                 selected_response.append(db.fetchone(sql,val))
         except:
             for i in range (1,5):
                 selected_response.append([('NULL'),])
+        
+        sql = '''SELECT link FROM conversation WHERE id = %s;'''
+        val = (mfv[0][0])
+
+        if db.fetchone(sql, val)[0] == None:
+            selected_response.append([('NULL'),])
+        else:
+            selected_response.append(db.fetchone(sql, val))
     except:
         selected_response = [('죄송해요. 잘 모르겠어요.',)] # 검색결과가 없을 때 송출 메시지
-        for i in range (1,5):
+        for i in range (1,6):
             selected_response.append([('NULL'),])
-    print(selected_response)
-    sql = '''SELECT link FROM conversation WHERE id = %s;'''
-    val = (mfv[0][0])
 
-    if db.fetchone(sql, val)[0] == None:
-        print(selected_response)
-        selected_response.append([('NULL'),])
-    else:
-        print(selected_response)
-        selected_response.append(db.fetchone(sql, val))
+    
     
     
     db.close()

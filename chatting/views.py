@@ -16,7 +16,14 @@ from django.views.decorators.csrf import csrf_exempt
 @csrf_exempt
 def hello(request):
     response = comparison.hello_tip()
-    message = {'message' : response[0]}
+    message = {
+        'message' : response[0],
+        'message2' : "NULL",
+        'message3' : "NULL",
+        'message4' : "NULL",
+        'message5' : "NULL",
+        'message6' : "NULL",
+        }
     return JsonResponse(message)
 
 
