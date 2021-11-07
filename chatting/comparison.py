@@ -59,15 +59,13 @@ def response_select(user_input):
             selected_response.append(['이거 너만 알려주는건데 '+db.fetchone(sql, val)[0]])    
         else:
             selected_response.append(db.fetchone(sql, val))
-        try:
-            sql = '''SELECT input_text FROM conversation WHERE id = %s;'''
-            i = random.randint(1,len(mfv))
-            print(i)
-            for i in range (1,5):
-                val = (mfv[random.randint(0,len(mfv))][0],)
+        
+        sql = '''SELECT input_text FROM conversation WHERE id = %s;'''
+        for i in range (1,5):
+            if len(mfv) > i:
+                val = (mfv[i][0],)
                 selected_response.append(db.fetchone(sql,val))
-        except:
-            for i in range (1,5):
+            else:
                 selected_response.append([('NULL'),])
         
         sql = '''SELECT link FROM conversation WHERE id = %s;'''
